@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: azure-vote-back
+  name: azure-vote-back-git
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: azure-vote-back
+      app: azure-vote-back-git
   template:
     metadata:
       labels:
-        app: azure-vote-back
+        app: azure-vote-back-git
     spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: azure-vote-back
+      - name: azure-vote-back-git
         image: redis
         ports:
         - containerPort: 6379
@@ -24,12 +24,12 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: azure-vote-front
+  name: azure-vote-front-git
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: azure-vote-front
+      app: azure-vote-front-git
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -38,13 +38,13 @@ spec:
   template:
     metadata:
       labels:
-        app: azure-vote-front
+        app: azure-vote-front-git
     spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: azure-vote-front
-        image: maglanos/azure-vote-front:v1
+      - name: azure-vote-front-git
+        image: microsoft/azure-vote-front:v1
         ports:
         - containerPort: 80
         resources:
@@ -54,4 +54,4 @@ spec:
             cpu: 500m
         env:
         - name: REDIS
-          value: "azure-vote-back"
+          value: "azure-vote-back-git"
