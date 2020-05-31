@@ -3,8 +3,10 @@
     "",
     "\\azure-vote",
     "\\azure-vote\\azure-vote",
+    "\\azure-vote\\azure-vote\\static",
+    "\\azure-vote\\azure-vote\\templates",
     "\\jenkins-tutorial"
   ],
-  "SelectedNode": "\\azure-vote\\azure-vote\\config_file.cfg",
+  "SelectedNode": "\\azure-vote\\azure-vote\\templates\\index.html",
   "PreviewInSolutionExplorer": false
 }
