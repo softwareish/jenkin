@@ -56,7 +56,6 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: azure-vote-front
-        privileged: true
         image: maglanos/azure-vote-front:v1
         ports:
         - containerPort: 80
