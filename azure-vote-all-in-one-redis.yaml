@@ -50,7 +50,6 @@ spec:
       labels:
         app: azure-vote-front
     spec:
-    privileged: true
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
