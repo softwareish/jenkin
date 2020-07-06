@@ -17,6 +17,8 @@ spec:
       containers:
       - name: azure-vote-back
         image: redis
+      securityContext:
+        privileged: true
         ports:
         - containerPort: 6379
           name: redis
