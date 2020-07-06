@@ -20,6 +20,7 @@ spec:
         ports:
         - containerPort: 6379
           name: redis
+          privileged: true
 ---
 apiVersion: v1
 kind: Service
